@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fa3db5d7-b8a3-4597-bc25-61ea9c1c7c3c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>yftl.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +22,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="yftl.py" />
+    <Folder Include="cmd\monthly\" />
+    <Folder Include="lib\" />
+    <Folder Include="cmd\" />
+    <Folder Include="cmd\yearly\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmd\monthly\mk_yf_mtd_csv.py" />
+    <Compile Include="cmd\yearly\mk_yf_ytd_csv.py" />
+    <Compile Include="lib\ticker.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
