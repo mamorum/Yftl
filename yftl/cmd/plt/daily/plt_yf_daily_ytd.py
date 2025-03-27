@@ -2,12 +2,10 @@
 # > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX 2022 2023
 # > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX,^^NDX 2023 2023
 
-from cProfile import label
 import sys
 import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
-import lib.ticker as lticker
 
 # コマンドライン引数の取得
 ticker = sys.argv[1]
