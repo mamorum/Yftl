@@ -23,11 +23,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="cmd\monthly\" />
+    <Folder Include="cmd\daily\" />
     <Folder Include="lib\" />
     <Folder Include="cmd\" />
     <Folder Include="cmd\yearly\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cmd\daily\mk_yf_dtd_csv.py" />
     <Compile Include="cmd\monthly\mk_yf_mtd_csv.py" />
     <Compile Include="cmd\yearly\mk_yf_ytd_csv.py" />
     <Compile Include="lib\ticker.py" />
