@@ -38,9 +38,10 @@ df = df[['Close']]  # 日付と終値を残す
 df['RTN'] = (df['Close'] / iclose - 1) * 100
 
 # 1月1日を補完
-jan1 = pd.Timestamp(f"{start}-01-01")
+jan1 = pd.Timestamp(f"{start}-01-01 00:00:00-0500", tz="America/New_York")
 jan1_df = pd.DataFrame({'Date': [jan1], 'Close': [0], 'RTN': [0]})
-df = pd.concat([df, jan1_df])
+jan1_df.set_index('Date', inplace=True)
+df = pd.concat([jan1_df, df])
 
 # グラフを作成
 plt.figure(figsize=(12, 6))
