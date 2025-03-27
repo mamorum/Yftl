@@ -38,6 +38,7 @@
     <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
     <Compile Include="cmd\plt\daily\plt_yf_daily_rtn.py" />
     <Compile Include="lib\ticker.py" />
+    <Compile Include="lib\yfi.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
