@@ -36,7 +36,7 @@
     <Compile Include="cmd\csv\daily\mk_yf_dtd_csv.py" />
     <Compile Include="cmd\csv\monthly\mk_yf_mtd_csv.py" />
     <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
-    <Compile Include="cmd\plt\daily\plt_yf_daily_ytd.py" />
+    <Compile Include="cmd\plt\daily\plt_yf_daily_rtn.py" />
     <Compile Include="lib\ticker.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

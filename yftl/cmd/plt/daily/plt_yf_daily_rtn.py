@@ -1,6 +1,6 @@
 # 使用例
-# > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX 2022 2023
-# > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX 2023 2023
+# > python cmd\plt\daily\plt_yf_daily_rtn.py ^^SPX 2022 2023
+# > python cmd\plt\daily\plt_yf_daily_rtn.py ^^SPX 2023 2023
 
 import sys
 import pandas as pd
