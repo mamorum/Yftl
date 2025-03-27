@@ -3,6 +3,7 @@
 # > python cmd\daily\mk_yf_dtd_csv.py JPY=X 2023 2023
 
 import sys
+import pandas as pd
 import yfinance as yf
 import lib.ticker as lticker
 
@@ -22,14 +23,19 @@ df = yft.history(
   auto_adjust=False, actions=False
 )
 
-# 年末のデータを抽出
-df['Year'] = df.index.year
-df = df[
-  df.index.month == 12
-].groupby('Year').tail(1)
-df = df[['Close']]  # 日付と終値だけ残す
+# 開始年-1の年末を抽出
+idf = df[df.index.year == start-1]
+idate = idf.index.max()
+idf = idf.loc[[idate]]
 
-# 年間収益率を算出
+# 開始年～終了年のデータを抽出
+df = df.loc[f'{start}-01-01':f'{end}-12-31']
+
+# 抽出したデータを結合
+df = pd.concat([idf, df])
+df = df[['Close']]  # 日付と終値を残す
+
+# 日次の収益率を算出
 df['DTD'] = df['Close'].pct_change()
 
 # 行を逆順に変更（降順）
