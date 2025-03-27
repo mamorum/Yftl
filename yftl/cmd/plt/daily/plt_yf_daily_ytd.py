@@ -1,9 +1,12 @@
 # 使用例
-# > python cmd\daily\mk_yf_daily_ytd_csv ^^SPX 2022 2023
-# > python cmd\daily\mk_yf_daily_ytd_csv ^^SPX,^^NDX 2023 2023
+# > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX 2022 2023
+# > python cmd\plt\daily\plt_yf_daily_ytd.py ^^SPX,^^NDX 2023 2023
 
+from cProfile import label
 import sys
+import pandas as pd
 import yfinance as yf
+import matplotlib.pyplot as plt
 import lib.ticker as lticker
 
 # コマンドライン引数の取得
@@ -29,8 +32,29 @@ iclose = idf.loc[idate, 'Close']
 
 # 開始年～終了年のデータを抽出
 df = df.loc[f'{start}-01-01':f'{end}-12-31']
+df = df[['Close']]  # 日付と終値を残す
 
-# 日次の年初来を算出
-df['YTD'] = df['Close'] / iclose - 1 
+# リターンを算出（パーセント）
+df['RTN'] = (df['Close'] / iclose - 1) * 100
+
+# 1月1日を補完
+jan1 = pd.Timestamp(f"{start}-01-01")
+jan1_df = pd.DataFrame({'Date': [jan1], 'Close': [0], 'RTN': [0]})
+df = pd.concat([df, jan1_df])
 
 # グラフを作成
+plt.figure(figsize=(12, 6))
+
+# 年初来の推移をプロット
+plt.plot(df.index, df["RTN"], label=ticker)
+
+# グラフのラベルとタイトル
+plt.xlabel("Date (Months)")
+plt.ylabel("Return (%)")
+plt.title("Performance")
+plt.legend()
+plt.grid()
+
+# グラフを表示
+plt.tight_layout()
+plt.show()
