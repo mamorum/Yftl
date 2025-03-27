@@ -22,17 +22,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="cmd\monthly\" />
-    <Folder Include="cmd\daily\" />
+    <Folder Include="cmd\csv\monthly\" />
+    <Folder Include="cmd\csv\daily\" />
+    <Folder Include="cmd\csv\" />
+    <Folder Include="cmd\plt\" />
+    <Folder Include="cmd\plt\daily\" />
     <Folder Include="lib\" />
     <Folder Include="cmd\" />
-    <Folder Include="cmd\yearly\" />
+    <Folder Include="cmd\csv\yearly\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cmd\daily\mk_yf_daily_ytd_csv.py" />
-    <Compile Include="cmd\daily\mk_yf_dtd_csv.py" />
-    <Compile Include="cmd\monthly\mk_yf_mtd_csv.py" />
-    <Compile Include="cmd\yearly\mk_yf_ytd_csv.py" />
+    <Compile Include="cmd\csv\daily\mk_yf_daily_ytd_csv.py" />
+    <Compile Include="cmd\csv\daily\mk_yf_dtd_csv.py" />
+    <Compile Include="cmd\csv\monthly\mk_yf_mtd_csv.py" />
+    <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
+    <Compile Include="cmd\plt\daily\plt_yf_daily_ytd.py" />
     <Compile Include="lib\ticker.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
