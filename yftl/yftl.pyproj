@@ -32,7 +32,6 @@
     <Folder Include="cmd\csv\yearly\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cmd\csv\daily\mk_yf_daily_ytd_csv.py" />
     <Compile Include="cmd\csv\daily\mk_yf_dtd_csv.py" />
     <Compile Include="cmd\csv\monthly\mk_yf_mtd_csv.py" />
     <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
