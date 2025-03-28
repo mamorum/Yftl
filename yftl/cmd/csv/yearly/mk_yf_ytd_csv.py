@@ -1,6 +1,6 @@
 # 使用例
-# > python cmd\yearly\mk_yf_ytd_csv.py ^^SPX 2022 2023
-# > python cmd\yearly\mk_yf_ytd_csv.py JPY=X 2023 2023
+# > python cmd\csv\yearly\mk_yf_ytd_csv.py ^^SPX 2022 2023
+# > python cmd\csv\yearly\mk_yf_ytd_csv.py JPY=X 2023 2023
 
 import sys
 import yfinance as yf
@@ -36,8 +36,8 @@ df['YTD'] = df['Close'].pct_change()
 df = df.iloc[::-1]
 
 # 出力ファイルを決定
-lticker = lticker.lower(ticker)
-csvfile = f'{lticker}-ytd-{start}-{end}.csv'
+lt = lticker.lower(ticker)
+csvfile = f'{lt}-ytd-{start}-{end}.csv'
 
 # CSVに出力
 fmt = '%Y-%m-%d'
