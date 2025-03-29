@@ -24,7 +24,6 @@ for start_year in investment_years:
             # 分配金再投資
             if index in dividends.index:  # 分配金がある日
                 dividend = dividends.loc[index]
-                print(dividend)
                 reinvest_price = row['Close']  # 再投資時点の株価
                 shares += dividend / reinvest_price  # 保有口数を更新
 
