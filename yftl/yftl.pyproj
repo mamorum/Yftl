@@ -25,6 +25,7 @@
     <Folder Include="cmd\csv\monthly\" />
     <Folder Include="cmd\csv\daily\" />
     <Folder Include="cmd\csv\" />
+    <Folder Include="cmd\ca\" />
     <Folder Include="cmd\plt\" />
     <Folder Include="cmd\plt\daily\" />
     <Folder Include="lib\" />
