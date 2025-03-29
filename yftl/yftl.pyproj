@@ -33,6 +33,9 @@
     <Folder Include="cmd\csv\yearly\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cmd\ca\ai_ca_ntr_rtn.py" />
+    <Compile Include="cmd\ca\ai_ca_pr_rtn.py" />
+    <Compile Include="cmd\ca\ca_pr_rtn.py" />
     <Compile Include="cmd\csv\daily\mk_yf_dtd_csv.py" />
     <Compile Include="cmd\csv\monthly\mk_yf_mtd_csv.py" />
     <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
