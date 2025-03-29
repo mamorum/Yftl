@@ -1,16 +1,17 @@
 import yfinance as yf
 
 # データ取得
-ticker = "SPY"  # 指数を指定（例: S&P 500 Index）
+ticker = "ACWI"  # 指数を指定（例: S&P 500 Index）
 yt = yf.Ticker(ticker)
 data = yt.history(
- start="2020-01-01", end="2025-01-01",
+ start="2018-01-01", end="2025-01-01",
  auto_adjust=False
 )
 dividends = yt.dividends  # 分配金情報の取得
 
 # 初期設定
 investment_years = [2022, 2023]  # 投資開始年
+#investment_years = [2019, 2020, 2021, 2022, 2023]  # 投資開始年
 results = []  # 各年ごとのリターンを格納
 
 for start_year in investment_years:
