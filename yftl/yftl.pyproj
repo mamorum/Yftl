@@ -26,6 +26,7 @@
     <Folder Include="cmd\csv\daily\" />
     <Folder Include="cmd\csv\" />
     <Folder Include="cmd\ca\" />
+    <Folder Include="cmd\plt\jp\" />
     <Folder Include="cmd\yca\" />
     <Folder Include="cmd\plt\" />
     <Folder Include="cmd\plt\daily\" />
@@ -42,6 +43,7 @@
     <Compile Include="cmd\csv\monthly\mk_yf_mtd_csv.py" />
     <Compile Include="cmd\csv\yearly\mk_yf_ytd_csv.py" />
     <Compile Include="cmd\plt\daily\plt_yf_daily_rtn.py" />
+    <Compile Include="cmd\plt\jp\plt_spx_daily_rtn.py" />
     <Compile Include="cmd\yca\ai_yca_pr.py" />
     <Compile Include="lib\ticker.py" />
     <Compile Include="lib\yfi.py" />
