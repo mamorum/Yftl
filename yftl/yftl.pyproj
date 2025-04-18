@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="blog\lastday\" />
     <Folder Include="cmd\csv\monthly\" />
     <Folder Include="cmd\csv\daily\" />
     <Folder Include="cmd\csv\" />
@@ -33,8 +34,11 @@
     <Folder Include="lib\" />
     <Folder Include="cmd\" />
     <Folder Include="cmd\csv\yearly\" />
+    <Folder Include="blog\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blog\lastday\get_monthly_lastday_not_index.py" />
+    <Compile Include="blog\lastday\get_monthly_lastday.py" />
     <Compile Include="cmd\ca\ai_ca_ntr_rtn.py" />
     <Compile Include="cmd\ca\ai_ca_pr_rtn.py" />
     <Compile Include="cmd\ca\ai_plt_ls_ca_rtn.py" />
